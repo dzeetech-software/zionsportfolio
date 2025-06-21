@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Zion Adedayo | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Poppins:wght@500;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #0f172a;
+      color: #ffffff;
+      scroll-behavior: smooth;
+      animation: fadeIn 1s ease-in;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(15, 23, 42, 0.9);
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    }
+    header h1 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 2rem;
+      color: #00f0ff;
+    }
+    nav a {
+      margin-left: 1.5rem;
+      text-decoration: none;
+      color: #fff;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: #FFD700;
+    }
+    section {
+      padding: 120px 20px 80px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .hero {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background: linear-gradient(135deg, #00f0ff, #FFD700);
+      text-align: center;
+      color: #0f172a;
+    }
+    .hero h2 {
+      font-size: 3rem;
+      font-family: 'Poppins', sans-serif;
+      margin-bottom: 1rem;
+    }
+    .hero p {
+      font-size: 1.25rem;
+      margin-bottom: 2rem;
+    }
+    .hero a {
+      background: #0f172a;
+      color: #00f0ff;
+      padding: 0.75rem 2rem;
+      border-radius: 30px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+    .hero a:hover {
+      background: #1e293b;
+    }
+    .section-title {
+      text-align: center;
+      font-size: 2.5rem;
+      font-family: 'Poppins', sans-serif;
+      color: #FFD700;
+      margin-bottom: 2rem;
+    }
+    .projects, .skills {
+      display: grid;
+      gap: 2rem;
+    }
+    .projects {
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+    .project-card {
+      background: #fff;
+      color: #0f172a;
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .project-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 24px rgba(0,0,0,0.3);
+    }
+    .project-card button {
+      margin-top: 1rem;
+      background: #00f0ff;
+      color: #0f172a;
+      padding: 0.5rem 1.25rem;
+      border: none;
+      border-radius: 20px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .skills {
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      justify-items: center;
+    }
+    .skill-badge {
+      background: #fff;
+      color: #0f172a;
+      font-weight: bold;
+      border-radius: 12px;
+      width: 100px;
+      height: 100px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      padding: 10px;
+      text-align: center;
+    }
+    .skill-badge img {
+      width: 40px;
+      height: 40px;
+      margin-bottom: 8px;
+    }
+    .contact {
+      background: linear-gradient(to bottom, #FFD700, #00f0ff);
+      color: #0f172a;
+      text-align: center;
+    }
+    .contact a, .resume-download {
+      background: #0f172a;
+      color: #00f0ff;
+      padding: 0.75rem 2rem;
+      border-radius: 30px;
+      font-weight: bold;
+      text-decoration: none;
+      margin: 1rem;
+      display: inline-block;
+      transition: background 0.3s ease;
+    }
+    .contact a:hover, .resume-download:hover {
+      background: #1e293b;
+    }
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      background: #0f172a;
+      color: #00f0ff;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Zion</h1>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section id="home" class="hero">
+    <h2>Zion Adedayo</h2>
+    <p>Crafting Stunning Frontend Experiences</p>
+    <a href="#contact">Hire Me</a>
+  </section>
+
+  <section id="projects">
+    <h3 class="section-title">Featured Projects</h3>
+    <div class="projects">
+      <div class="project-card">
+        <h4>A Modern website</h4>
+        <p>A website for an production company.</p>
+        <a href="https://jentaflexcompanylimited.vercel.app/" target="_blank">
+          <img src="pdf/Screenshot 2025-06-21 195902.png" alt="Project Screenshot" style="width: 100%; border-radius: 12px; margin-bottom: 1rem;">
+          
+        <button>View</button>
+        </a>
+      </div>
+      <div class="project-card">
+        <h4>Project Two</h4>
+        <p>An interactive UI with responsive design.</p>
+        <a href="https://www.figma.com/proto/URXBNthnUbqwUmiB4o7PbX/CIRCLES?t=O5MA5UQlNSq0LsMa-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&node-id=3-81&starting-point-node-id=3%3A9">
+        <button>View</button>
+        </a>
+      </div>
+      <div class="project-card">
+        <h4>Project Three</h4>
+        <p>Creative storytelling through design.</p>
+        <button>View</button>
+      </div>
+      <div class="project-card">
+        <h4>Project Four</h4>
+        <p>Data-rich dashboards that look and feel great.</p>
+        <button>View</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <h3 class="section-title">My Toolbox</h3>
+    <div class="skills">
+      <div class="skill-badge"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML"/><span>HTML</span></div>
+      <div class="skill-badge"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS"/><span>CSS</span></div>
+      <div class="skill-badge"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript"/><span>JavaScript</span></div>
+      <div class="skill-badge"><img src="data:image/webp;base64,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" alt="Tailwind"/><span>TailwindCSS</span></div>
+      <div class="skill-badge"><img src="https://img.icons8.com/ios-filled/50/000000/video-editing.png" alt="Video Editing"/><span>Video Editing</span></div>
+      <div class="skill-badge"><img src="https://img.icons8.com/ios-filled/50/000000/design.png" alt="UI/UX"/><span>UI/UX Design</span></div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <h3 class="section-title">Let's Connect</h3>
+    <p>Have a project or idea? Let’s make it real.</p>
+    <a href="mailto:zion@example.com">Send Email</a>
+    <a href="pdf/Zion-Adedayo-Resume.pdf" class="resume-download" download>Download Resume</a>
+  </section>
+
+  <footer>
+    &copy; <span id="year"></span> Zion Adedayo. All rights reserved.
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    window.addEventListener('scroll', () => {
+      const header = document.querySelector('header');
+      header.style.backgroundColor = window.scrollY > 50 ? '#0f172a' : 'rgba(15, 23, 42, 0.9)';
+    });
+
+    document.querySelectorAll('a[href^="#"]').forEach(link => {
+      link.addEventListener('click', e => {
+        e.preventDefault();
+        document.querySelector(link.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+      });
+    });
+  </script>
+</body>
+</html>
